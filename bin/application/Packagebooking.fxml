@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #f4f7f6;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PackagebookingController">
+   <children>
+      <VBox spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Button fx:id="btnBack" mnemonicParsing="false" onAction="#handleBack" style="-fx-background-color: transparent; -fx-cursor: hand;" text="←" textFill="#2c3e50">
+                     <font><Font name="System Bold" size="24.0" /></font>
+                  </Button>
+                  <Label text="Tour Booking Management" textFill="#2c3e50">
+                     <font><Font name="System Bold" size="24.0" /></font>
+                  </Label>
+               </children>
+            </HBox>
+
+            <Separator prefWidth="200.0" />
+
+            <HBox spacing="30.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefWidth="300.0" spacing="15.0">
+                     <children>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="User Name" textFill="#7f8c8d" />
+                              <TextField fx:id="txtName" prefHeight="35.0" promptText="Enter your name" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Email" textFill="#7f8c8d" />
+                              <TextField fx:id="txtEmail" prefHeight="35.0" promptText="Enter your Email" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Phone" textFill="#7f8c8d" />
+                              <TextField fx:id="txtPhone" prefHeight="35.0" promptText="Enter your phone" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                         <VBox spacing="5.0">
+                           <children>
+                              <Label text="Booking Date" textFill="#7f8c8d" />
+                              <TextField fx:id="txtBookingDate" editable="false" prefHeight="35.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 5;" text="Today (Auto)" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Start Date" textFill="#7f8c8d" />
+                              <DatePicker fx:id="dpStartDate" prefHeight="35.0" prefWidth="300.0" promptText="Select travel date" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                       
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Members" textFill="#7f8c8d" />
+                              <TextField fx:id="txtMember" prefHeight="35.0" promptText="How many people?" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnBook" onAction="#handleBook" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 8; -fx-cursor: hand;" text="Confirm Booking" textFill="WHITE">
+                           <font><Font name="System Bold" size="16.0" /></font>
+                        </Button>
+                     </children>
+                  </VBox>
+
+                  <StackPane style="-fx-background-color: #f9f9f9; -fx-background-radius: 10; -fx-border-color: #dcdde1; -fx-border-radius: 10;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" spacing="15.0">
+                           <children>
+                              <Label fx:id="lblPackageName" text="Tour Destination Preview" textFill="#34495e">
+                                 <font><Font name="System Bold" size="22.0" /></font>
+                              </Label>
+                              <ImageView fx:id="imgTour" fitHeight="380.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
